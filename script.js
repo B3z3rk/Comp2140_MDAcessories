@@ -46,3 +46,9 @@ addtocart.addEventListener("click", add);
 function add(){
     
 }
+var gotocart = document.getElementById("cart2");
+
+gotocart.addEventListener("click",function(e){
+    window.open("cart.html");
+
+})
