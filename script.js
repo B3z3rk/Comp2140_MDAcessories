@@ -1,4 +1,3 @@
-
 // Menu toggle----------------------------------------------
 var MenuItems = document.getElementById("MenuItems");
 
@@ -14,7 +13,6 @@ var MenuItems = document.getElementById("MenuItems");
             MenuItems.style.maxHeight = "0px";
         }
     }
-<<<<<<< HEAD
 
     // js for product gallery-------------------------------
 
@@ -37,8 +35,6 @@ var MenuItems = document.getElementById("MenuItems");
 
 
     // Cart function-------------------------------------------------------
-=======
->>>>>>> 0e671591ad65e1fe3d08c714b0d4b0c303bb474d
     var parent= document.querySelector(".modal-parent")
     var productbtn = document.getElementsByClassName('addp');
     var x = document.querySelector(".X");
@@ -71,8 +67,4 @@ addtocart.addEventListener("click", add);
 
 function add(){
     
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 0e671591ad65e1fe3d08c714b0d4b0c303bb474d
