@@ -13,8 +13,8 @@ function menutoggle() {
 
 //  product gallery-------------------------------
 
-var productImg = document.getElementById("productImg");
-var smallImg = document.getElementsByClassName("small-img");
+var productImg = document.getElementById("productImg")
+var smallImg = document.getElementsByClassName("small-img")
 
 smallImg[0].onclick = function () {
   productImg.src = smallImg[0].src;
@@ -68,29 +68,30 @@ const nameInput = document.querySelector("#name");
 const email = document.querySelector("#email");
 const subject = document.querySelector("#subject");
 const success = document.querySelector("#success");
-const errorNodes = document.querySelectorAll(".error");
+const nodes = document.querySelectorAll(".error");
 
 // Validate data ...........................................
 function validateForm() {
+   alert("Message sent successfully");
    
   clearMessages();
 
   let errorFlag = false;
 
   if (nameInput.ariaValueMax.length < 1) {
-    errorNodes[0].innerText = "Name cannot be blank";
+    nodes[0].innerText = "Name cannot be blank";
     nameInput.classList.add("error-border");
     errorFlag = true;
   }
 
   if (!emailIsValid(email.value)) {
-    errorNodes[1].innerText = "Invalid email";
+    nodes[1].innerText = "Invalid email";
     email.classList.add("error-border");
     errorFlag = true;
   }
 
   if (message.value.length < 1) {
-    errorNodes[2].innerText = "Enter message";
+    nodes[2].innerText = "Enter message";
     subject.classList.add("error-border");
     errorFlag = true;
   }
@@ -100,20 +101,20 @@ function validateForm() {
   }
 }
 
-// Clear error / success message..............................
+// // Clear error / success message..............................
 
 function clearMessages() {
   for (let i = 0; i < errorNodes.length; i++) {
-    errorNodes[i].innerText = "";
+    nodes[i].innerText = "";
   }
   success.innerText = nameInput.classList.remove("error-border");
   email.classList.remove("error-border");
   subject.classList.remove("error-border");
 }
 
-// check if email is valid................................
+// // check if email is valid................................
 
 function emailIsValid(email) {
   let pattern = /\S+@\S+\.\S+/;
   return pattern.test(email);
-}
+ }
