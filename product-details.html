@@ -30,7 +30,10 @@
                     <li><a href="">Account</a></li>
                 </ul>
             </nav>
-            <img src="images/cart.png" width="30px" height="30px">
+            <button id ="cart2">
+                <img src="images/cart.png" width="25px" height="25px">
+                <p id= quantity>0</p>
+            </button>>
             <img src="images/menu.png" class="menu-icon" width="30px" height="30px" onclick="menutoggle()">
         </div>
        
@@ -38,30 +41,57 @@
 
     <!-- Single Product Details -->
 
-    <div class="small-container">
+    <div class="small-container single-product">
         <div class="row">
             <div class="col-2">
-                <img src="images/image 2.jpg" width="100%">
+                <img src="images/image 2.jpg" width="100%" id="productImg">
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="images/image22.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/image21.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/image24.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/image25.jpg" width="100%" class="small-img">
+                    </div>
+                </div>
 
             </div>
             <div class="col-2">
-                <p>Home / Key Chain</p>
-                <h1>Resin Letter Key Chain</h1>
+                <h5>Home / Key Chain</h5>
+                <h4>Resin Letter Key Chain</h4>
                 <h4>$1000 JMD</h4>
                 <select>
                     <option>Select Type</option>
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
-                    <option>D</option>
-                   
+                    <option>Customized Order</option>
+                    <option>Standard Order</option>                   
                 </select>
+                <input type="number" value="1">
+                <a href="" class ="btn">Add To Cart</a>
                 
+                <h3>Product Details <i class="fa fa-indent"></i></h3>
+                <br>
+                <p>This is a Key ring made by resin. It is a customizable order where in you 
+                    can choose your own color or that of the one seen in the image</p>
+                </p>
             </div>
         </div>
     </div>
 
+    <!-- title -->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
 
+
+    </div>
 
     <!--------------------------------------- Products Section ---------------------------------------->
     
@@ -79,6 +109,7 @@
                     
                 </div>
                 <p>$4500 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
             </div>
             <div class="col-4">
                 <img src="images/planter4.jpg" >
@@ -91,6 +122,7 @@
                     <i class ="fa fa-star-o"></i>
                 </div>
                 <p>$4500 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
             </div>
             <div class="col-4">
                 <img src="images/planter6.jpg" >
@@ -103,6 +135,7 @@
                     <i class ="fa fa-star-o"></i>
                 </div>
                 <p>$4500 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
             </div>
             <div class="col-4">
                 <img src="images/planter7.jpg" >
@@ -115,6 +148,7 @@
                     <i class ="fa fa-star-o"></i>
                 </div>
                 <p>$4500 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
             </div>
         </div>
     </div>
