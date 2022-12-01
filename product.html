@@ -1,178 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<hea5d>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MDAccessories</title>
+    <title>All Products - MDAccessories</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,700&display=swap" 
     rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-<div class="navbar">
 
-    <div class="logo">
-        <img src="images/MDAccessories.png" width="125px">
-    </div>
-    <nav>
-        <ul id="MenuItems">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Account</a></li>
-        </ul>
-    </nav>
-   
-    <button id ="cart2">
-        <img src="images/cart.png" width="30px" height="30px">
-        <p id= quantity>0</p>
-    </button>
-    <img src="images/menu.png" class="menu-icon" width="30px" height="30px" onclick="menutoggle()">
-</div>
-<section>
-<div class="row">
-    <div class="col-4">
-        <img src="images/image 2.jpg" >
-        <h4>Resin Letter Key Rings</h4>
-        <p>$1000 JMD</p>
-        <button class="addP"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-    <div class="col-4">
-        <img src="images/image31.jpg" >
-            <h4>Black Sand Unisex Ring</h4>
-            <p>$2500 JMD</p>
-            <button class="addp"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-    <div class="col-4">
-        <img src="images/image4.jpg" >
-        <h4>Glow in the Dark Bracelet </h4>
-        <p>$1550 JMD</p>
-        <button class= "addp"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-    <div class="col-4">
-       <img src="images/image5.jpg" >
-        <h4>Beaded Earrings</h4>
-        <p>$1500 JMD</p>
-        <button class= "addp"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-    <div class="col-4">
-        <img src="images/image34.jpg" >
-        <h4>Unisex Silver Ring</h4>
-        <p>$1000 JMD</p>
-        <button class= "addp"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-    <div class="col-4">
-       <img src="images/image7.jpg" >
-        <h4>Beaded waistbeads</h4>
-        <p>$3000 JMD</p>
-        <button class= "addp"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-    <div class="col-4">
-       <img src="images/image43.jpg" >
-        <h4>Glow in the Dark Bracelet </h4>
-        <p>$1550 JMD</p>
-        <button class= "addp"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-    <div class="col-4">
-        <img src="images/image82.jpg" >
-        <h4>Reversible Satin Bonnets</h4>
-        <p>$1500 JMD</p>
-        <button class= "addp"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-    <div class="col-4">
-        <img src="images/image22.jpg" >
-        <h4>Resin Letter Key Chain</h4>
-        <p>$1000 JMD</p>
-        <button class= "addp"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-    <div class="col-4">
-      <img src="images/image51.jpg" >
-        <h4>Beaded Drop Earrings</h4>
-        <p>$3000 JMD</p>
-        <button class= "addp"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-    <div class="col-4">
-        <img src="images/image62.jpg" >
-        <h4>Beaded Anklets </h4>
-        <p>$1550 JMD</p>
-        <button class= "addp"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-    <div class="col-4">
-        <img src="images/image6.jpg" >
-        <h4>Beaded Necklaces</h4>
-        <p>$1500 JMD</p>
-        <button class= "addp"><img src="images/add.jpg" width="30px" height="30px"></button>
-    </div>
-</div>
-    <div class="modal-parent">
-        <div class = "modal">
-                <form action="">
-                    <label for="custom"> Customize your product!</label>
-                    <input type="text" id="custom">
-                    <label for=" quantity"> Quantity</label>
-                    <input type="integer" id ="quantity">
-                </form>
-                <button id ="cart">Add to cart</button>
-                <span class = "X">&times;</span>
-    </div>
+    <!---------------------------------------- Header Section ------------------------------------------->
+
+   <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/MDAccessories.png" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <button id ="cart2">
+                <img src="images/cart.png" width="25px" height="25px">
+                <p id= quantity>0</p>
+            </button>
+            <img src="images/menu.png" class="menu-icon" width="30px" height="30px" onclick="menutoggle()">
         </div>
-</body>
+       
+   </div>
+    
 
-</section>
-<!-- cart -->
-<section class="container content-section">
-    <h2 class="section-header">CART</h2>
-    <div class="cart-row">
-        <span class="cart-item cart-header cart-column">ITEM</span>
-        <span class="cart-price cart-header cart-column">PRICE</span>
-        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-    </div>
-    <div class="cart-items">
-    </div>
-    <div class="cart-total">
-        <strong class="cart-total-title">Total</strong>
-        <span class="cart-total-price">$0</span>
-    </div>
-    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-</section>
 
-    <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col-1">
-                        <h3>the footer</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p></div>
-                    <div class="footer-col-2">
-                        <img src="images/MDAccessories.png" >
-                        <p>We are about to get crafty........</p>
-                    </div>
-                    <div class="footer-col-3">
-                        <h3>Useful links</h3>
-                        <ul>
-                            <li>Coupons</li>
-                            <li>Blog Post</li>
-                            <li>Join Affiliate</li>
-                            <li>Return Policy</li>
-                        </ul>
-                    </div>
-                    <div class="footer-col-4">
-                        <h3>Follow us</h3>
-                        <ul>
-                            <li>Twitter</li>
-                            <li>Instagram</li>
-                            <li>Facebook</li>
-                            <li>LinkedIn</li>
-                        </ul>
-                    </div>
+    <!--------------------------------------- Products Section ---------------------------------------->
+    
+    <div class="small-conatiner">
+        <div class="row row-2">
+            <h2>All Products</h2>
+            <select>
+                <option>Default Sorting</option>
+                <option>Sort by Price</option>
+                <option>By popularity</option>
+                <option>By rating</option>
+                <option>By Sale</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/image 2.jpg" >
+                <h4>Resin Letter Key Rings</h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                    
                 </div>
-                <hr>
-                <p class="copyright">Copyright 2022 - Group 2</p>
+                <p>$1000 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="col-4">
+                <img src="images/image31.jpg" >
+                <h4>Black Sand Unisex Ring</h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                </div>
+                <p>$2500 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="col-4">
+                <img src="images/image4.jpg" >
+                <h4>Glow in the Dark Bracelet </h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                </div>
+                <p>$1550 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="col-4">
+                <img src="images/image5.jpg" >
+                <h4>Beaded Earrings</h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                </div>
+                <p>$1500 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="col-4">
+                <img src="images/image34.jpg" >
+                <h4>Unisex Silver Ring</h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                </div>
+                <p>$1000 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="col-4">
+                <img src="images/image7.jpg" >
+                <h4>Beaded waistbeads</h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                </div>
+                <p>$3000 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="col-4">
+                <img src="images/image43.jpg" >
+                <h4>Glow in the Dark Bracelet </h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                </div>
+                <p>$1550 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="col-4">
+                <img src="images/image82.jpg" >
+                <h4>Reversible Satin Bonnets</h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                </div>
+                <p>$1500 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="col-4">
+                <img src="images/image22.jpg" >
+                <h4>Resin Letter Key Chain</h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                </div>
+                <p>$1000 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="col-4">
+                <img src="images/image51.jpg" >
+                <h4>Beaded Drop Earrings</h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                </div>
+                <p>$3000 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="col-4">
+                <img src="images/image62.jpg" >
+                <h4>Beaded Anklets </h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                </div>
+                <p>$1550 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="col-4">
+                <img src="images/image6.jpg" >
+                <h4>Beaded Necklaces</h4>
+                <div class="rating">
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star"></i>
+                    <i class ="fa fa-star-o"></i>
+                </div>
+                <p>$1500 JMD</p>
+                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/image32.jpg" >
+                    <h4>Silver Ring</h4>
+                    <div class="rating">
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star-o"></i>
+                    </div>
+                    <p>$1000 JMD</p>
+                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                </div>
+                <div class="col-4">
+                    <img src="images/image21.jpg" >
+                    <h4>Letter Key Rings</h4>
+                    <div class="rating">
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star-o"></i>
+                    </div>
+                    <p>$3000 JMD</p>
+                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                </div>
+                <div class="col-4">
+                    <img src="images/image23.jpg" >
+                    <h4>Letter Key Rings</h4>
+                    <div class="rating">
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star-o"></i>
+                    </div>
+                    <p>$1550 JMD</p>
+                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                </div>
+                <div class="col-4">
+                    <img src="images/image33.jpg" >
+                    <h4>Gold Unisex Rings</h4>
+                    <div class="rating">
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star-o"></i>
+                    </div>
+                    <p>$1500 JMD</p>
+                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                </div>
+                <div class="col-4">
+                    <img src="images/image41.jpg" >
+                    <h4>Glow in the Dark Bracelet</h4>
+                    <div class="rating">
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star-o"></i>
+                    </div>
+                    <p>$1000 JMD</p>
+                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                </div>
+                <div class="col-4">
+                    <img src="images/image61.jpg" >
+                    <h4>Beaded Anklets</h4>
+                    <div class="rating">
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star-o"></i>
+                    </div>
+                    <p>$3000 JMD</p>
+                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                </div>
+                <div class="col-4">
+                    <img src="images/image53.jpg" >
+                    <h4>Beaded Drop Earrings </h4>
+                    <div class="rating">
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star-o"></i>
+                    </div>
+                    <p>$1550 JMD</p>
+                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                </div>
+                <div class="col-4">
+                    <img src="images/image73.jpg" >
+                    <h4>Beaded waistbeads</h4>
+                    <div class="rating">
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star"></i>
+                        <i class ="fa fa-star-o"></i>
+                    </div>
+                    <p>$1500 JMD</p>
+                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                </div>
+            </div>
+
+            <div class="page-btn">
+                <span>1</span>
+                <span>2</span>
+                <span>&#8594;</span>
             </div>
         </div>
+
+        <section>
+            <div class="modal-parent">
+                <div class = "modal">
+                        <form action="">
+                            <label for="custom"> Customize your product!</label>
+                            <input type="text" id="custom">
+                            <label for=" quantity"> Quantity</label>
+                            <input type="integer" id ="quantity">
+                        </form>
+                        <button id ="cart">Add to cart</button>
+                        <span class = "X">&times;</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- cart -->
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+
+ 
+
+    <!---------------------------------------------- Footer Section -------------------------------------------->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>the footer</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p></div>
+                <div class="footer-col-2">
+                    <img src="images/MDAccessories.png" >
+                    <p>We are about to get crafty........</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Join Affiliate</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>LinkedIn</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - Group 2</p>
+        </div>
+    </div>
+
 </body>
 </html>
