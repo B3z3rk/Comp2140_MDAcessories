@@ -38,3 +38,10 @@ var MenuItems = document.getElementById("MenuItems");
         parent.style.display = "none";
       }
     }
+var addtocart = document.getElementById("cart2");
+
+addtocart.addEventListener("click", add);
+
+function add(){
+    
+}

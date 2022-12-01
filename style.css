@@ -352,21 +352,6 @@ select:focus{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* media query for menu icon */
 
 @media only screen and (max-width:800px){
@@ -462,3 +447,18 @@ select:focus{
     display: grid;
   }
   
+  .test {
+    margin-top: 30px;
+  }
+
+#cart2{
+    background:transparent;
+    border: transparent;
+}
+#cart2 span:hover{
+    border: #555;
+}
+section{
+    display: inline-grid;
+    
+}
