@@ -168,9 +168,9 @@ p{
     font-size:14px;
 }
 
-/* .rating .fa{
+.rating .fa{
     color:#ff523b
-} */
+}
 
 .col-4:hover{
     transform: translateY(-5px);
@@ -214,10 +214,10 @@ small{
     transform: translateY(-10px);
 }
 
-/* .fa .fa-quote-left{
+.fa-quote-left{
     font-size:34px;
     color:#ff523b
-} */
+}
 
 .col-3 p{
     font-size: 12px;
@@ -315,6 +315,57 @@ ul{
     display: none;
 
 }
+
+/* All Products page */
+
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+
+select{
+    border: 1px solid #ff523b;
+    padding: 5px;
+}
+select:focus{
+    outline: none;
+}
+.page-btn{
+    margin: 0 auto 80px;
+}
+
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #ff523b;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+
+}
+.page-btn span:hover{
+    background: #ff523b ;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* media query for menu icon */
 
