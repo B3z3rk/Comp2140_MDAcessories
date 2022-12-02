@@ -1,0 +1,118 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+ html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+ }
+
+ .header{
+    background-color: #f7e6f7;
+    position: sticky;
+    top:0;
+    left: 0;
+    z-index: 1000;
+ }
+ .header .flex{
+    display:flex;
+    align-items: center;
+    padding:1.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+ }
+
+ .header .flex .Logo{
+    margin-right: auto;
+    font-size: 2.5rem;
+    color:#de26cf;
+ }
+ .header .flex .navbar a{
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: #de26cf;
+ }
+
+ .header .flex .navbar a:hover{
+    color: #91698e;
+ }
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section{
+    padding: 2rem;
+}
+
+.btn,
+.option-btn,
+.delete-btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    font-size: 1.7rem;
+    padding:1.2rem 3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover{
+    background-color: black;
+}
+
+.option-btn{
+    background-color: orange;
+}
+
+.delete-btn{
+    margin-top: 0;
+    background-color: red;
+}
+
+
+
+
+.add-product-form{
+    max-width: 40rem;
+    background-color:#f7e6f7;
+    border-radius: .5rem;
+    padding:2rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+.add-product-form h3{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color:black;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.add-product-form .box{
+    text-transform: none;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.7rem;
+    color: black;
+    border-radius: .5rem;
+    background-color: white;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.add-product-form .file{
+    padding: 10px 25px;
+    font-size: 20px;
+}

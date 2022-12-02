@@ -7,114 +7,221 @@ function menutoggle() {
   if (MenuItems.style.maxHeight == "0px") {
     MenuItems.style.maxHeight = "200px";
   } else {
+MenuItems.style.maxHeight = "0px";
+
+function menutoggle() {
+  if (MenuItems.style.maxHeight == "0px") {
+    MenuItems.style.maxHeight = "200px";
+  } else {
     MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if( MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+  }
+}
   }
 }
 
-//  product gallery-------------------------------
+    // js for product gallery-------------------------------
 
-var productImg = document.getElementById("productImg")
-var smallImg = document.getElementsByClassName("small-img")
+    var productImg = document.getElementById("productImg")
+    var smallImg = document.getElementsByClassName("small-img")
 
-smallImg[0].onclick = function () {
-  productImg.src = smallImg[0].src;
-};
-smallImg[1].onclick = function () {
-  productImg.src = smallImg[1].src;
-};
-smallImg[2].onclick = function () {
-  productImg.src = smallImg[2].src;
-};
-smallImg[3].onclick = function () {
-  productImg.src = smallImg[3].src;
-};
+        smallImg[0].onclick = function(){
+            productImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick = function(){
+            productImg.src = smallImg[1].src;
+        }
+        smallImg[2].onclick = function(){
+            productImg.src = smallImg[2].src;
+        }
+        smallImg[3].onclick = function(){
+            productImg.src = smallImg[3].src;
+        }
 
-// Cart function-------------------------------------------------------
-// var parent = document.querySelector(".modal-parent");
-// var productbtn = document.getElementsByClassName("addp");
-// var x = document.querySelector(".X");
 
-// for (var i = 0; i < productbtn.length; i++) {
-//   var button = productbtn[i];
-//   button.addEventListener("click", appear);
-// }
 
-// function appear() {
-//   console.log("click");
-//   parent.style.display = "block";
-// }
-
-// x.addEventListener("click", disappearX);
-// function disappearX() {
-//   parent.style.display = "none";
-// }
-
-// parent.addEventListener("click", disappearParent);
-// function disappearParent(e) {
-//   if (e.target.className == "modal-parent") {
-//     parent.style.display = "none";
-//   }
-// }
-// var addtocart = document.getElementById("cart2");
-
-// addtocart.addEventListener("click", add);
-
-// function add() {}
-
-// contact form ..........................................
-
-// Get data
-const nameInput = document.querySelector("#name");
-const email = document.querySelector("#email");
-const subject = document.querySelector("#subject");
-const success = document.querySelector("#success");
-const nodes = document.querySelectorAll(".error");
-
-// Validate data ...........................................
-function validateForm() {
-   alert("Message sent successfully");
+    // Cart function-------------------------------------------------------
    
-  clearMessages();
+    let products = [
+        {name:"Resin Letter Key Rings",
+        price: 1000,
+        inCart: 0 },
+    
+        {
+            name:"Black Sand Unisex Ring",
+            price: 2500,
+            inCart: 0 }
+    
+            ,{
+                name:"Glow in the Dark Bracelet",
+                price: 1550,
+                inCart: 0 },
+                {
+                    name:"Beaded Earrings",
+                    price: 1500,
+                    inCart: 0 },
+                    {
+                        name:"Unisex Silver Ring",
+                        price: 1000,
+                        inCart: 0 },
+                        {name: "Beaded waistbeads",
+                            price: 3000 ,
+                            inCart: 0 },
+                            {name:"Glow in the Dark Bracelet",
+                                price: 1150,
+                                inCart: 0 }
+                                ,
+                                {name:"Reversible Satin Bonnets",
+                                    price: 1500,
+                                    inCart: 0 },
+                                    {name:"Beaded Drop Earrings",
+                                        price: 3000,
+                                        inCart: 0 },
+                                        {name:"Beaded Anklets",
+                                            price: 1550,
+                                            inCart: 0 },
+                                            {name:"beaded necklaces",
+                                                price: 1500,
+                                                inCart: 0 },
+        
+    ]
+    let carts= document. getElementsByClassName("addp");
+    for(let i=0; i <carts.length;i++){
+        carts[i].addEventListener('click',() =>{
+            cartNumbers(products[i]);
+            totalcost(products[i]);
+        })
+    
+    }
+    function onLoadCartNumbers(){
+        let productNumbers = localStorage.getItem('cartNumbers');
+    
+        if (productNumbers){
+            document.getElementById("quantity").textContent = productNumbers;
+        }
+    }
+    
+    function cartNumbers(product){
+        let productNumbers = localStorage.getItem('cartNumbers');
+        productNumbers = parseInt(productNumbers);
+        if (productNumbers){
+            localStorage.setItem('cartNumbers',productNumbers+1);
+            document.getElementById("quantity").textContent = productNumbers+1;
+        }else{
+            localStorage.setItem('cartNumbers',1);
+            document.getElementById("quantity").textContent = 1;
+        }
+    
+        setItems(product);
+    }
+    
+    function setItems(product){
+        let cartItems= localStorage.getItem('productsInCart');
+        cartItems = JSON.parse(cartItems);
+        if (cartItems!=null){
+            if (cartItems[product.name] == undefined){
+                cartItems = {
+                    ...cartItems, 
+                    [product.name]:product
+    
+                }
+            }
+            cartItems[product.name].inCart+=1;
+        }else{
+            product.inCart = 1;
+            cartItems={
+                [product.name]:product 
+            }
+        }
+        localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+    }
 
-  let errorFlag = false;
+    
+    function totalcost(product){
+        let cartcost = localStorage.getItem('totalcost');
+        if (cartcost !=null){
+            cartcost=parseInt(cartcost)
+            localStorage.setItem("totalcost",cartcost+ product.price);
+        }else{
+            localStorage.setItem("totalcost",product.price);
 
-  if (nameInput.ariaValueMax.length < 1) {
-    nodes[0].innerText = "Name cannot be blank";
-    nameInput.classList.add("error-border");
-    errorFlag = true;
-  }
+        }
+        
+    }
 
-  if (!emailIsValid(email.value)) {
-    nodes[1].innerText = "Invalid email";
-    email.classList.add("error-border");
-    errorFlag = true;
-  }
+    let button = document.getElementById("checkout");
+    button.addEventListener('click',checkout);
+    function checkout(){
+        window.open("checkout.html");
+        
+    }
+    function displayCart(){
+        let cartcost = localStorage.getItem('totalcost');
+        let cartItems = localStorage.getItem("productsInCart");
+        cartItems = JSON.parse(cartItems);
+        let productcontainer = document.querySelector(".cart-product")
+        if (cartItems && productcontainer){
+            productcontainer.innerHTML = ' ';
+            Object.values(cartItems).map(item=> {
+                productcontainer.innerHtml += 
+                `<div class = "cart-product">
+                <ion-icon name = "close-circle></ion-icon>
+                <span>${item.name}</span>
+                <div class = "product-price">$${item.price},00</div>
+                <div class = "product-quanity">
+                <ion-icon class= "decrease" name ="arrow-dropleft-circle"><ion-icon>
+                <span>${item.inCart}</span>
+                <ion-icon class= "increase" name ="arrow-dropright-circle"><ion-icon>
+                </div>
+                <div class= "total">
+                $${item.inCart *item.price},00
+                </div>
+                </div>
+                `;
+            });
 
-  if (message.value.length < 1) {
-    nodes[2].innerText = "Enter message";
-    subject.classList.add("error-border");
-    errorFlag = true;
-  }
+            productcontainer.innerHTML += `
+            <div class= "basket-total>
+            <h4 class = "total-title> 
+                total
+            </h>
+            <h4 class = "basketTotal">
+             $${cartcost}
 
-  if (!errorFlag) {
-    success.innerText = "Success! We will contact you shortly";
-  }
-}
 
-// // Clear error / success message..............................
+            `
+            
+        }
+    }
+    
 
-function clearMessages() {
-  for (let i = 0; i < errorNodes.length; i++) {
-    nodes[i].innerText = "";
-  }
-  success.innerText = nameInput.classList.remove("error-border");
-  email.classList.remove("error-border");
-  subject.classList.remove("error-border");
-}
+    
+    onLoadCartNumbers();
+    displayCart();
+    
+// Menu toggle----------------------------------------------
+var MenuItems = document.getElementById("MenuItems");
 
-// // check if email is valid................................
+    MenuItems.style.maxHeight = "0px";
 
-function emailIsValid(email) {
-  let pattern = /\S+@\S+\.\S+/;
-  return pattern.test(email);
- }
+    function menutoggle(){
+        if( MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+   
