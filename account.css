@@ -59,7 +59,7 @@ textarea {
     border-bottom: 2px solid #828282;
 }
 
-input[type=submit] {
+input[type=button] {
     background-color: #545557;
     padding: 15px 0;
     color: rgb(214, 67, 67);
@@ -70,7 +70,7 @@ input[type=submit] {
     transition: all .3s ease;
 }
 
-input[type=submit]:hover {
+input[type=button]:hover {
     background: #FFF;
     color: #1b1c1e;
 }
