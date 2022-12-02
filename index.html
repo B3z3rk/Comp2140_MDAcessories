@@ -1,368 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MDAccessories</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,700&display=swap" 
-    rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Add Products</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
 </head>
+
 <body>
-
-
-    <!---------------------------------------- Header Section ------------------------------------------->
-<div class="header">
-   <div class="container">
+    <div class="container">
         <div class="navbar">
             <div class="logo">
-                <img src="images/MDAccessories.png" width="125px">
+                <img src="MDAccessories.png" width="125px">
             </div>
             <nav>
                 <ul id="MenuItems">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                    <li><a href="account.html">Account</a></li>
-                
+                    <li><a href="add_product.html">Add Product</a></li>
                 </ul>
             </nav>
-            
-            <img src="images/menu.png" class="menu-icon" width="30px" height="30px" onclick="menutoggle()">
         </div>
-        <div class="row">
-            <div class="col-2">
-                <h1>Crafting your Curiosity</h1>
-                <p>Making you more crafty<br>with beautiful homemade adornments. </p>
 
-                <a href=" " class ="btn">Explore Now &#8594;</a>
-            </div>
-            <div class="col-2">
-                <img src="images//coverpage.png" >
-
-            </div>
-        </div>
-   </div>
-</div>
-    
-    <!-------------------------------------------- featured categories section ----------------------------------->
-
-    <div class="categories">
-        <div class="small-container">
-            <div class="row">
-                <div class="col-3">
-                    <img src="images/bonnet.jpg">
-    
-                </div>
-                <div class="col-3">
-                    <img src="images/hands.jpg" >
-    
-                </div>
-                <div class="col-3">
-                    <img src="images/waistbeads.jpg" >
-    
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    
-
-
-    <!--------------------------------------- Featured Products Section ---------------------------------------->
-    
-    <div class="small-conatiner">
-        <h2 class="title">Featured Products</h2>
-        <div class="row">
-            <div class="col-4">
-                <img src="images/image 2.jpg" >
-                <h4>Resin Letter Key Rings</h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                    
-                </div>
-                <p>$1000 JMD</p>
-            </div>
-            <div class="col-4">
-                <img src="images/image31.jpg" >
-                <h4>Black Sand Unisex Ring</h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                </div>
-                <p>$2500 JMD</p>
-            </div>
-            <div class="col-4">
-                <img src="images/image4.jpg" >
-                <h4>Glow in the Dark Bracelet </h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                </div>
-                <p>$1550 JMD</p>
-            </div>
-            <div class="col-4">
-                <img src="images/image5.jpg" >
-                <h4>Beaded Earrings</h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                </div>
-                <p>$1500 JMD</p>
-            </div>
-        
-            <!-------------------------------------- Latest Products Section ---------------------------------->
-        </div>
-        <h2 class="title"> Latest Products</h2>
-        <div class="row">
-            <div class="col-4">
-                <img src="images/image34.jpg" >
-                <h4>Unisex Silver Ring</h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                </div>
-                <p>$1000 JMD</p>
-            </div>
-            <div class="col-4">
-                <img src="images/image7.jpg" >
-                <h4>Beaded waistbeads</h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                </div>
-                <p>$3000 JMD</p>
-            </div>
-            <div class="col-4">
-                <img src="images/image43.jpg" >
-                <h4>Glow in the Dark Bracelet </h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                </div>
-                <p>$1550 JMD</p>
-            </div>
-            <div class="col-4">
-                <img src="images/image82.jpg" >
-                <h4>Reversible Satin Bonnets</h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                </div>
-                <p>$1500 JMD</p>
-            </div>
-            <div class="col-4">
-                <img src="images/Planter1.jpg" >
-                <h4>Recycled Concrete Planter</h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                </div>
-                <p>$4000 JMD</p>
-            </div>
-            <div class="col-4">
-                <img src="images/image51.jpg" >
-                <h4>Beaded Drop Earrings</h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                </div>
-                <p>$3000 JMD</p>
-            </div>
-            <div class="col-4">
-                <img src="images/image62.jpg" >
-                <h4>Beaded Anklets </h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                </div>
-                <p>$1550 JMD</p>
-            </div>
-            <div class="col-4">
-                <img src="images/image6.jpg" >
-                <h4>Beaded Necklaces</h4>
-                <div class="rating">
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star"></i>
-                    <i class ="fa fa-star-o"></i>
-                </div>
-                <p>$1500 JMD</p>
-            </div>
-        </div>
     </div>
 
-    <!---------------------------------- Offer --------------------------------------------->
-
-    <div class="offer">
-        <div class="small-container">
-            <div class="row">
-                <div class="col-2">
-                    <img src="images/satinpillow.png" class="offer-img" >
-                </div>
-                <div class="col-2">
-                    <p>Exclusively Available on MDAccessories</p>
-                <h1>Satin Pillow Case</h1>
-                <small>Elevate Your Beauty Sleep: This 100% polyester satin pillowcases protect delicate facial hair from scratches, creases and tugs, helping to reduce split ends and ensuring a night of restorative beauty sleep.</small>
-                <a href="cartindex.html" class=" btn ">Buy Now &#8594;</a>    
-
-                </div> 
-            </div>
-        </div>
-    </div>
-
-
-    <!--------------------------------- Testimonial Section ---------------------------------------------------->
-
-    <div class="testimonial">
-        <div class="small-container">
-            <div class="row">
-                <div class="col-3">
-                    <i class="fa fa-quote-left"></i>
-                    <p>Your customer service is outstanding, your packaging is beautiful and the products I have received so far are wonderful - great quality! But what I find most appealing is that your prices are better than most other options out there on almost every product!</p>
-                    <div class="rating">
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star-o"></i>
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label for="productCode">Product Code</label>
+                        <input type="text" name="productCode" id="productCode">
                     </div>
-                    <img src="images/ppl1.jpg" >
-                    <h3>Shenella Presus</h3>
-                </div>
-                <div class="col-3">
-                     <i class="fa fa-quote-left"></i>
-                    <p>It is nice to know that your company takes the time to get to know their customers.  I am very pleased with my purchases and wish that I would of found you earlier!</p>
-                    <div class="rating">
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star-o"></i>
+                    <div>
+                        <label for="product">Product Name</label>
+                        <input type="text" name="product" id="product">
                     </div>
-                    <img src="images/ppl2.jpg" >
-                    <h3>Rhianna Dennis</h3>
-                </div>
-                <div class="col-3">
-                     <i class="fa fa-quote-left"></i>
-                    <p>I just got my order of birthstone charms and they are FABULOUS!  The colors are amazing and the size and price are PERFECT.</p>
-                    <div class="rating">
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star"></i>
-                        <i class ="fa fa-star-o"></i>
+                    <div>
+                        <label for="qty">Qty</label>
+                        <input type="number" name="qty" id="qty">
                     </div>
-                    <img src="images/ppl3.jpg" >
-                    <h3>Jamal Whyte</h3>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <div>
+                        <label for="perPrice">Price</label>
+                        <input type="number" name="perPrice" id="perPrice">
+                    </div>
 
-    <!------------------------------------------ Payments Accepted ----------------------------------------------->
-    <div class="payments">
-        <div class="small-container">
-            <div class="row">
-                <div class="col-5">
-                    <img src="images/Lynk.png"  >
-                </div>
-                <div class="col-5">
-                    <img src="images/visa.png" >
-                </div>
-                <div class="col-5">
-                        <img src="images/paypal.png" >
-                </div>
-                <div class="col-5">
-                        <img src="images/mastercard.png" >
-                </div>
-                <div class="col-5">
-                        <img src="images/cod.png" >
-                </div>
-            </div>
-        </div>
-    </div>
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
 
-<!---------------------------------------------- Footer Section -------------------------------------------->
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Product Code</th>
+                                <th>Product Name</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="footer-col-1">
-                <h3>Contact Us At</h3>
-                <p>daniellebenjamin@gmail.com</p>
-                <p>(876) 524-5288</p>
-                <p><b>OR</b></p>
-                    <a href="contact.html">
-                        <p>Click Here</p>
-                    </a>
-            </div>
-            <div class="footer-col-2">
-                <img src="images/MDAccessories.png" >
-                <p>We are about to get crafty!</p>
-            </div>
-            <div class="footer-col-3">
-                <h3>Useful links</h3>
-                <ul>
-                    <li>Coupons</li>
-                    <li>Blog Post</li>
-                    <li>Join Affiliate</li>
-                    <li>Return Policy</li>
-                </ul>
-            </div>
-            <div class="footer-col-4">
-                <h3>Follow us</h3>
-                <ul>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                    <li>LinkedIn</li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <p class="copyright">Copyright 2022 - Group 2</p>
-    </div>
-</div>
-
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
