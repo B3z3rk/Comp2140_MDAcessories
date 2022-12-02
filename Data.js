@@ -83,4 +83,12 @@ let shopItemsData = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "cartimages/planter6.jpg",
   },
+  {
+    id: "ndjfhatgeolpsbtetre",
+    name: "Satin Pillow Case",
+    price: 3000,
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+    img: "cartimages/satin.jpg",
+  },
 ];
+

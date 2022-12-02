@@ -30,6 +30,10 @@ a {
   align-items: center;
   padding: 20px;
 }
+.navbar h2{
+ padding-right: 25px;
+}
+
 
 nav{
   flex: 1;
@@ -64,11 +68,12 @@ a{
   background-color: #fff;
   color: #212529;
   font-size: 30px;
-  padding: 5px;
+  padding: 3px;
   border-radius: 4px;
 }
 
 .cartAmount {
+ 
   position: absolute;
   top: -15px;
   right: -10px;

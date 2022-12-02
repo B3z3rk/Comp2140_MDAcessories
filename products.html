@@ -7,9 +7,12 @@
     <title>All Products - MDAccessories</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,700&display=swap" 
     rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cstyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body>
 
@@ -24,17 +27,23 @@
             <nav>
                 <ul id="MenuItems">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="cartindex.html">Products</a></li>
+                    <li><a href="products.html">Products</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="account.html">Account</a></li>
                     <li class="cart">
-                        <a href= "cart.html">
-                            <img src="images/cart.png" width="25px" height="25px">
-                            <span id= "quantity">0</span>
-                        </a>
+                        
                     </li>
+                    
                 </ul>
+                <a href="cart.html">
+                    <div class="cart">
+                      <i class="bi bi-cart2"></i>
+                      <div id="cartAmount" class="cartAmount">0</div>
+                    </div>
+                    <br>
+                  </a>
+                
             </nav>
             
             <img src="images/menu.png" class="menu-icon" width="30px" height="30px" onclick="menutoggle()">
@@ -72,7 +81,7 @@
                     
                 </div>
                 <p>$1000 JMD</p>
-                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                
             </div>
             <div class="col-4">
                 <a href="prod 1 .html">
@@ -88,7 +97,7 @@
                     <i class ="fa fa-star-o"></i>
                 </div>
                 <p>$2500 JMD</p>
-                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                
             </div>
             <div class="col-4">
                 <a href="prod 2.html">
@@ -104,7 +113,7 @@
                     <i class ="fa fa-star-o"></i>
                 </div>
                 <p>$1550 JMD</p>
-                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                
             </div>
             <div class="col-4">
                 <a href="prod 3.html">
@@ -120,7 +129,7 @@
                     <i class ="fa fa-star-o"></i>
                 </div>
                 <p>$1500 JMD</p>
-                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                
             </div>
             <div class="col-4">
                 <a href="prod 6.html">
@@ -136,7 +145,7 @@
                     <i class ="fa fa-star-o"></i>
                 </div>
                 <p>$1000 JMD</p>
-                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                
             </div>
           
             <div class="col-4">
@@ -153,7 +162,7 @@
                     <i class ="fa fa-star-o"></i>
                 </div>
                 <p>$1500 JMD</p>
-                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                
             </div>
             
             <div class="col-4">
@@ -170,7 +179,7 @@
                     <i class ="fa fa-star-o"></i>
                 </div>
                 <p>$3000 JMD</p>
-                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                
             </div>
             
             <div class="col-4">
@@ -187,7 +196,7 @@
                     <i class ="fa fa-star-o"></i>
                 </div>
                 <p>$1500 JMD</p>
-                <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                
             </div>             
                 
                 
@@ -205,7 +214,7 @@
                         <i class ="fa fa-star-o"></i>
                     </div>
                     <p>$3000 JMD</p>
-                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                    
                 </div>
                 <div class="col-4">
                     <a href="prod 11.html">
@@ -220,7 +229,7 @@
                         <i class ="fa fa-star-o"></i>
                     </div>
                     <p>$4000 JMD</p>
-                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                    
                 </div>
                 
                 <div class="col-4">
@@ -236,7 +245,7 @@
                         <i class ="fa fa-star-o"></i>
                     </div>
                     <p>$1500 JMD</p>
-                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                    
                 </div>
                 <div class="col-4">
                     <a href="prod 10.html">
@@ -251,7 +260,7 @@
                         <i class ="fa fa-star-o"></i>
                     </div>
                     <p>$3000 JMD</p>
-                    <button class= "addp"><img src="images/cart.png" width="30px" height="30px"></button>
+                    
                 </div>
                 
             </div>
@@ -304,4 +313,7 @@
     </div>
 
 </body>
+<script src="Data.js"></script>
+
+<script src="cart.js"></script>
 </html>
