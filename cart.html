@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,700&display=swap" 
     rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -25,12 +26,22 @@
                     <li><a href="">About</a></li>
                     <li><a href="">Contact</a></li>
                     <li><a href="">Account</a></li>
+                    <li class="cart">
+                        <a href= "cart.html">
+                            <img src="images/cart.png" width="25px" height="25px">
+                            <span id= "quantity">0</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-            <button id ="cart2">
+            <!-- <button id ="cart2">
+                <a href="cart.html">
+                    <img src="images/cart.png" width="25px" height="25px">
+                <p id= "quantity">0</p>
+                </a>
                 <img src="images/cart.png" width="25px" height="25px">
                 <p id= quantity>0</p>
-            </button>
+            </button> -->
             <img src="images/menu.png" class="menu-icon" width="30px" height="30px" onclick="menutoggle()">
         </div>
        
@@ -43,9 +54,12 @@
     <h5 class="product-quantity">Quantity</h5>
     <h5 class="product-total">Total</h5>
     
-    <div class = "product" > 
+    <div class = "cart-product" > 
 
     </div>
+    <button id="checkout">Checkout</button>
+
+</div>
 </div>
     
 
@@ -90,6 +104,8 @@
 </div>
 
 
-
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

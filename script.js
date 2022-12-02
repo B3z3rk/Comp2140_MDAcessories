@@ -1,6 +1,12 @@
 // Menu toggle----------------------------------------------
 var MenuItems = document.getElementById("MenuItems");
 
+MenuItems.style.maxHeight = "0px";
+
+function menutoggle() {
+  if (MenuItems.style.maxHeight == "0px") {
+    MenuItems.style.maxHeight = "200px";
+  } else {
     MenuItems.style.maxHeight = "0px";
 
     function menutoggle(){
@@ -13,26 +19,41 @@ var MenuItems = document.getElementById("MenuItems");
             MenuItems.style.maxHeight = "0px";
         }
     }
-    // var parent= document.querySelector(".modal-parent")
-    // var productbtn = document.getElementsByClassName('addp');
-    // var x = document.querySelector(".X");
+  }
+}
 
-    // for (var i = 0; i < productbtn.length ; i++){
-    //     var button = productbtn[i];
-    //     button.addEventListener("click", appear);
-    // }
+    // js for product gallery-------------------------------
+
+    // var productImg = document.getElementById("productImg")
+    // var smallImg = document.getElementsByClassName("small-img")
+
+    //     smallImg[0].onclick = function(){
+    //         productImg.src = smallImg[0].src;
+    //     }
+    //     smallImg[1].onclick = function(){
+    //         productImg.src = smallImg[1].src;
+    //     }
+    //     smallImg[2].onclick = function(){
+    //         productImg.src = smallImg[2].src;
+    //     }
+    //     smallImg[3].onclick = function(){
+    //         productImg.src = smallImg[3].src;
+    //     }
 
 
+
+    // Cart function-------------------------------------------------------
+   
     let products = [
         {name:"Resin Letter Key Rings",
         price: 1000,
         inCart: 0 },
-
+    
         {
             name:"Black Sand Unisex Ring",
             price: 2500,
             inCart: 0 }
-
+    
             ,{
                 name:"Glow in the Dark Bracelet",
                 price: 1550,
@@ -72,8 +93,16 @@ var MenuItems = document.getElementById("MenuItems");
             cartNumbers(products[i]);
             totalcost(products[i]);
         })
-
+    
     }
+    function onLoadCartNumbers(){
+        let productNumbers = localStorage.getItem('cartNumbers');
+    
+        if (productNumbers){
+            document.getElementById("quantity").textContent = productNumbers;
+        }
+    }
+    
     function cartNumbers(product){
         let productNumbers = localStorage.getItem('cartNumbers');
         productNumbers = parseInt(productNumbers);
@@ -84,104 +113,107 @@ var MenuItems = document.getElementById("MenuItems");
             localStorage.setItem('cartNumbers',1);
             document.getElementById("quantity").textContent = 1;
         }
-
+    
         setItems(product);
     }
-
+    
     function setItems(product){
         let cartItems= localStorage.getItem('productsInCart');
-        cartItems = JSON>parseFloat(cartItems);
+        cartItems = JSON.parse(cartItems);
         if (cartItems!=null){
             if (cartItems[product.name] == undefined){
                 cartItems = {
                     ...cartItems, 
                     [product.name]:product
-
+    
                 }
             }
-
             cartItems[product.name].inCart+=1;
-        }
-        console.log("my prodcut is " , product);
-        product.incart = 1;
-         cartItems= {
-            [product.name] : product
+        }else{
+            product.inCart = 1;
+            cartItems={
+                [product.name]:product 
+            }
         }
         localStorage.setItem("productsInCart", JSON.stringify(cartItems));
     }
-    function onLoadCartNumbers(){
-        let productNumbers = localStorafe.getItem('cartNumbers');
 
-        if (productNumbers){
-            document.querySelector("quantity").textContent = productNumbers;
+    
+    function totalcost(product){
+        let cartcost = localStorage.getItem('totalcost');
+        if (cartcost !=null){
+            cartcost=parseInt(cartcost)
+            localStorage.setItem("totalcost",cartcost+ product.price);
+        }else{
+            localStorage.setItem("totalcost",product.price);
+
         }
+        
     }
 
-    function totalcost(product){
-        console.log("",product.price);
-        let cartcost = localStorage.getItem('totalcost');
-        cartcost=parseInt(cartcost)
-        if (cartcost !=null){
-            localStorage.setItem("totalcost",cartcost+ product.price);
-        }
-        localStorage.setItem("totalcost",product.price);
+    let button = document.getElementById("checkout");
+    button.addEventListener('click',checkout);
+    function checkout(){
+        window.open("checkout.html");
+        
     }
     function displayCart(){
+        let cartcost = localStorage.getItem('totalcost');
         let cartItems = localStorage.getItem("productsInCart");
         cartItems = JSON.parse(cartItems);
-        let productcontainer = document.querySelector(".products")
+        let productcontainer = document.querySelector(".cart-product")
         if (cartItems && productcontainer){
-            productcontainer.innerHTML = " ";
-            Object.values(cartItems).map(item  => {
+            productcontainer.innerHTML = ' ';
+            Object.values(cartItems).map(item=> {
                 productcontainer.innerHtml += 
-                `<div class = "product">
+                `<div class = "cart-product">
                 <ion-icon name = "close-circle></ion-icon>
-                <img src= "./images/${item.name}.jpg">
                 <span>${item.name}</span>
-                <div class = "price">${item.price},00</div>
-                <div class = "quanity">
+                <div class = "product-price">$${item.price},00</div>
+                <div class = "product-quanity">
+                <ion-icon class= "decrease" name ="arrow-dropleft-circle"><ion-icon>
                 <span>${item.inCart}</span>
+                <ion-icon class= "increase" name ="arrow-dropright-circle"><ion-icon>
                 </div>
                 <div class= "total">
-                ${item.inart *item.price},00
-
+                $${item.inCart *item.price},00
+                </div>
                 </div>
                 `;
             });
+
+            productcontainer.innerHTML += `
+            <div class= "basket-total>
+            <h4 class = "total-title> 
+                total
+            </h>
+            <h4 class = "basketTotal">
+             $${cartcost}
+
+
+            `
             
         }
     }
-
- 
     
-//     function appear() {
-//         console.log("click");
-//         parent.style.display = "block";
-//     }
+
     
-//     x.addEventListener("click", disappearX);
-//     function disappearX() {
-//       parent.style.display = "none";
-//     }
+    onLoadCartNumbers();
+    displayCart();
     
-//     parent.addEventListener("click", disappearParent)
-//     function disappearParent(e) {
-//       if (e.target.className == "modal-parent") {
-//         parent.style.display = "none";
-//       }
-//     }
-// var addtocart = document.getElementById("cart2");
+// Menu toggle----------------------------------------------
+var MenuItems = document.getElementById("MenuItems");
 
-// addtocart.addEventListener("click", add);
+    MenuItems.style.maxHeight = "0px";
 
-// function add(){
-    
-// }
-
-// var addtocar = document.getElementsByClassName("addp");
-
-// addtocar.addEventListener("click",addtocart);
-// function addtocart(){
-
-
-onLoadCartNumbers();
+    function menutoggle(){
+        if( MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+   
